@@ -1,0 +1,93 @@
+// SECTION: Breakpoints
+$pc-max: 1920px;
+$pc-min: 1440px;
+$phone-max: 375px;
+
+// SECTION: Colors
+$clr-primary: hsl(7, 99%, 70%);
+$clr-primary-800: hsl(7, 99%, 80%);
+$clr-primary-600: hsl(7, 99%, 60%);
+$clr-primary-300: hsl(7, 99%, 30%);
+
+$clr-secondary: hsl(51, 100%, 49%);
+$clr-secondary-800: hsl(51, 100%, 80%);
+$clr-secondary-300: hsl(51, 100%, 30%);
+$clr-secondary-100: hsl(51, 100%, 15%);
+
+$clr-tertiary: hsl(168, 34%, 41%);
+$clr-tertiary-800: hsl(168, 34%, 80%);
+$clr-tertiary-300: hsl(198, 62%, 26%);
+$clr-tertiary-200: hsl(167, 40%, 24%);
+
+$clr-white: hsl(0, 0%, 100%);
+$clr-white-1005: hsla(0, 0%, 100%, 0.5);
+$clr-white-1003: hsla(0, 0%, 100%, 0.3);
+$clr-white-900: hsl(0, 0%, 90%);
+
+$clr-grey: hsl(210, 4%, 67%);
+$clr-grey-500: hsl(232, 10%, 55%);
+$clr-grey-400: hsl(213, 9%, 39%);
+$clr-grey-200: hsl(212, 27%, 19%);
+
+// SECTION: Font styles
+$fs-default: 1.8rem;
+
+$fs-heading-max: 4rem;
+$fs-heading-m: 2.8rem;
+$fs-heading-min: 2rem;
+
+$fs-text-max: 2rem;
+$fs-text-b: 1.6rem;
+$fs-text-m: 1.5rem;
+$fs-text-min: 1.4rem;
+
+$fluid-heading-max: --font-size-fluid-2;
+$fluid-heading-m: --font-size-fluid-2;
+$fluid-heading-min: --font-size-fluid-2;
+
+$fluid-text-max: --font-size-fluid-2;
+$fluid-text-m: --font-size-fluid-2;
+$fluid-text-min: --font-size-fluid-2;
+
+$font-default: 'Barlow', sans-serif;
+$font-explicit: 'Fraunces', serif;
+
+$fw-default: 600;
+$fw-max: 900;
+$fw-b: 700;
+$fw-s: 300;
+
+// SECTION: Ease
+$ease-1: cubic-bezier(0.25, 0, 0.5, 1);
+$ease-2: cubic-bezier(0.25, 0, 0.4, 1);
+$ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+
+$ease-in-1: cubic-bezier(0.25, 0, 1, 1);
+$ease-in-2: cubic-bezier(0.5, 0, 1, 1);
+$ease-in-3: cubic-bezier(0.7, 0, 1, 1);
+
+$ease-out-1: cubic-bezier(0, 0, 0.75, 1);
+$ease-out-2: cubic-bezier(0, 0, 0.5, 1);
+$ease-out-3: cubic-bezier(0, 0, 0.3, 1);
+
+$ease-in-out-1: cubic-bezier(0.1, 0, 0.9, 1);
+$ease-in-out-2: cubic-bezier(0.3, 0, 0.7, 1);
+$ease-in-out-3: cubic-bezier(0.5, 0, 0.5, 1);
+
+$ease-elastic-1: cubic-bezier(0.5, 0.75, 0.75, 1.25);
+$ease-elastic-2: cubic-bezier(0.5, 1, 0.75, 1.25);
+$ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+
+$ease-squish-1: cubic-bezier(0.5, -0.1, 0.1, 1.5);
+$ease-squish-2: cubic-bezier(0.5, -0.3, 0.1, 1.5);
+$ease-squish-3: cubic-bezier(0.5, -0.5, 0.1, 1.5);
+
+// SECTION: Animations
+$animation-fade-in: fade-in 0.5s $ease-3;
+$animation-fade-out: fade-out 0.5s $ease-3;
+
+$animation-slide-in-up: slide-in-up 0.5s $ease-3;
+$animation-slide-in-down: slide-in-down 0.5s $ease-3;
+
+$animation-slide-out-up: slide-out-up 0.5s $ease-3;
+$animation-slide-out-down: slide-out-down 0.5s $ease-3;

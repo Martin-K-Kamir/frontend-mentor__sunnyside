@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+@import 'base/reset.scss';
+@import 'base/variables';
+@import 'base/functions';
+
+@import 'mixins/base';
+@import 'mixins/media-queries';
+@import 'mixins/positioning';
+@import 'mixins/shorthands';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/scrollbar';
+
+@import 'components/btns';
+
+@import 'layout/navbar';
+
+@import 'base/utilities';
