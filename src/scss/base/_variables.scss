@@ -29,33 +29,34 @@ $clr-grey-500: hsl(232, 10%, 55%);
 $clr-grey-400: hsl(213, 9%, 39%);
 $clr-grey-200: hsl(212, 27%, 19%);
 
-// SECTION: Font styles
-$fs-default: 1.8rem;
-
-$fs-heading-max: 4rem;
-$fs-heading-m: 2.8rem;
-$fs-heading-min: 2rem;
-
-$fs-text-max: 2rem;
-$fs-text-b: 1.6rem;
-$fs-text-m: 1.5rem;
-$fs-text-min: 1.4rem;
-
-$fluid-heading-max: --font-size-fluid-2;
-$fluid-heading-m: --font-size-fluid-2;
-$fluid-heading-min: --font-size-fluid-2;
-
-$fluid-text-max: --font-size-fluid-2;
-$fluid-text-m: --font-size-fluid-2;
-$fluid-text-min: --font-size-fluid-2;
-
+// SECTION: Typography
 $font-default: 'Barlow', sans-serif;
 $font-explicit: 'Fraunces', serif;
+
+$fs-default: 1.8rem;
+$fs-max: 5rem;
+$fs-lg: 4rem; 
+$fs-b: 2.5rem;
+$fs-m: 2rem;
+$fs-s: 1.5rem;
+$fs-sm: 1.3rem;
+$fs-min: 1rem;
+
+$fs-fluid-max: clamp(1, 1, 1);
+$fs-fluid-lg: clamp(1, 1, 1); 
+$fs-fluid-b: clamp(1, 1, 1);
+$fs-fluid-m: clamp(1, 1, 1);
+$fs-fluid-s: clamp(1, 1, 1);
+$fs-fluid-sm: clamp(1, 1, 1);
+$fs-fluid-min: clamp(1, 1, 1);
 
 $fw-default: 600;
 $fw-max: 900;
 $fw-b: 700;
-$fw-s: 300;
+$fw-m: 500;
+$fw-s: 400;
+$fw-min: 200;
+
 
 // SECTION: Ease
 $ease-1: cubic-bezier(0.25, 0, 0.5, 1);
@@ -83,11 +84,13 @@ $ease-squish-2: cubic-bezier(0.5, -0.3, 0.1, 1.5);
 $ease-squish-3: cubic-bezier(0.5, -0.5, 0.1, 1.5);
 
 // SECTION: Animations
-$animation-fade-in: fade-in 0.5s $ease-3;
-$animation-fade-out: fade-out 0.5s $ease-3;
+$duration-default: 0.5s;
 
-$animation-slide-in-up: slide-in-up 0.5s $ease-3;
-$animation-slide-in-down: slide-in-down 0.5s $ease-3;
+$animation-fade-in: fade-in $duration-default $ease-3;
+$animation-fade-out: fade-out $duration-default $ease-3;
 
-$animation-slide-out-up: slide-out-up 0.5s $ease-3;
-$animation-slide-out-down: slide-out-down 0.5s $ease-3;
+$animation-slide-in-up: slide-in-up $duration-default $ease-3;
+$animation-slide-in-down: slide-in-down $duration-default $ease-3;
+
+$animation-slide-out-up: slide-out-up $duration-default $ease-3;
+$animation-slide-out-down: slide-out-down $duration-default $ease-3;

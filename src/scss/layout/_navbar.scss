@@ -1,5 +1,8 @@
 .nav {
-  $_bp-swap: to-em(600px);
+  $_bp-navbar-swap: to-em(600px);
+  $_z-infront: 2;
+  $_z-overlay: 1;
+  $_dropdown-duration: 0.3s;
 
   &-container {
     position: relative;
@@ -17,7 +20,7 @@
   &__links {
     @include flex-me($align: center, $gap: clamp(2.2rem, 1rem + 2.61vw, 5rem)); // var1?
 
-    @include mq-max-w($_bp-swap) {
+    @include mq-max-w($_bp-navbar-swap) {
       display: none;
     }
 
@@ -49,13 +52,13 @@
   }
 
   &__hamburger {
+    z-index: $_z-infront;
     @include size(2.2rem, 1.8rem);
     @include flex-col-center($justify: space-between);
+    display: none; // as default hidden
 
-    z-index: 2;
-
-    @include mq-min-w($_bp-swap) {
-      display: none;
+    @include mq-max-w($_bp-navbar-swap) {
+      display: flex;
     }
 
     &--open {
@@ -75,29 +78,31 @@
         $clr-secondary
       );
       background-size: 200% 100%;
-      transition: background-position 0.3s;
+      transition: background-position $_dropdown-duration;
 
       &:nth-child(2) {
-        transform: scale(-1);
+        transform: scale(-1); // reversing animation path
       }
     }
   }
 
   &__dropdown-menu {
-    z-index: 2;
+    z-index: $_z-infront;
     @include abs-center;
-    top: 23rem;
-    padding-block: 3.9rem;
-    width: calc(100% - (clamp(2rem, 1rem + 2.61vw, 5rem) * 2));
+    top: 23rem; // change
+    padding-block: 4rem; // var3?
+    width: calc(100% - (clamp(2.2rem, 1rem + 2.61vw, 5rem) * 2)); //var?
     background-color: $clr-white;
     @include flex-col-center($gap: 2.2rem);
-    display: none;
+
+    display: none; // as default hidden
 
     &--open {
       display: flex;
       animation: $animation-fade-in forwards, $animation-slide-in-up;
-      animation-duration: 0.3s;
+      animation-duration: $_dropdown-duration;
 
+      // overwrite global keyframe
       @keyframes slide-in-up {
         from {
           transform: translateY(1%);
@@ -108,8 +113,9 @@
     &--hidden {
       display: flex;
       animation: $animation-fade-out forwards, $animation-slide-out-down;
-      animation-duration: 0.3s;
+      animation-duration: $_dropdown-duration;
 
+       // overwrite global keyframe
       @keyframes slide-out-down {
         to {
           transform: translateY(1%);
@@ -126,7 +132,7 @@
 
     & .nav__link {
       color: $clr-grey-500;
-      font-size: $fs-text-max;
+      font-size: $fs-m;
 
       &--highlight {
         @include content-color($clr-grey-200, $clr-secondary);
@@ -135,10 +141,8 @@
   }
 
   &__dropdown-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    z-index:$_z-overlay;
+    @include fix($t: 0, $l: 0);
     @include size(100%);
 
     &--open {

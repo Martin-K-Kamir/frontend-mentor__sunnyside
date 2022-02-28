@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $browser-context: 16; // Default
 @function to-em($pixels, $context: $browser-context) {
   @if (unitless($pixels)) {
@@ -8,5 +10,5 @@ $browser-context: 16; // Default
     $context: $context * 1px;
   }
 
-  @return $pixels / $context * 1em;
+  @return math.div($pixels, $context) * 1em;
 }
