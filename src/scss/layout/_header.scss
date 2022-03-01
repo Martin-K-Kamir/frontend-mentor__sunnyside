@@ -11,8 +11,13 @@
   &__container {
     position: relative;
     @include size(100%, clamp(50vh, 46vh + 22vw, 80vh));
-    @include flex-me($align: center, $direction: column, $gap: clamp(0rem, 1rem + 1vw, 8rem));
+    @include flex-col-center($gap: clamp(0rem, 1rem + 1vw, 8rem));
     overflow: hidden;
+
+    & .header__title,
+    & .header__arrow {
+      @include pos-Y(clamp(-4rem, -3rem + 1vw, -7rem));
+    }
   }
 
   &__background {
@@ -28,7 +33,7 @@
   }
 
   &__title {
-    margin-top: clamp(11rem, 1rem + 5vw, 22rem);
+    //margin-top: clamp(11rem, 1rem + 5vw, 22rem);
     font-size: clamp(4.5rem, 1rem + 5vw, 8rem);
     font-family: $font-explicit;
     text-transform: uppercase;
@@ -42,7 +47,7 @@
 
   &__arrow {
     cursor: pointer;
-    width: clamp(2.5rem, 1rem + 1vw, 3rem);
+    width: clamp(2.2rem, 1rem + 1vw, 3rem);
     height: auto;
   }
 }
