@@ -8,18 +8,13 @@ svg {
   stroke: unset;
 }
 
-body {
-  background-image: url('../../imgs/desktop/image-header.jpg');
-  background-size: cover;
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
 .app-container {
-  width: min(192rem, 100vw);
+  //width: min(213.1rem, 100%);
   margin-inline: auto;
   font-family: $font-default;
   font-size: $fs-default;

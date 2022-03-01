@@ -1,8 +1,9 @@
 // SECTION: Flexbox
-@mixin flex-me($justify: center, $align: center, $gap: null) {
+@mixin flex-me($justify: null, $align: null, $direction: null, $gap: null) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
+  flex-direction: $direction;
   gap: $gap;
 }
 
