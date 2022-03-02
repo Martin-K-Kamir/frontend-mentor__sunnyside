@@ -68,6 +68,26 @@ $fw-m: 500;
 $fw-s: 400;
 $fw-min: 200;
 
+// SECTION: Sizes
+
+$size-max: 25rem;
+$size-xlg: 15rem;
+$size-lg: 10rem;
+$size-b: 7rem;
+$size-m: 5rem;
+$size-s: 4rem;
+$size-sm: 2rem;
+$size-xsm: 1rem;
+$size-min: .5rem;
+
+$size-fluid-max: clamp(1, 1, 1);
+$size-fluid-lg: clamp(1, 1, 1);
+$size-fluid-b: clamp(1, 1, 1);
+$size-fluid-m: clamp(1, 1, 1);
+$size-fluid-s: clamp(2.2rem, 1rem + 2.61vw, 5rem);
+$size-fluid-sm: clamp(1rem, 1rem + 1vw, 3rem);
+$size-fluid-min: clamp(1, 1, 1);
+
 // SECTION: Ease
 $ease-1: cubic-bezier(0.25, 0, 0.5, 1);
 $ease-2: cubic-bezier(0.25, 0, 0.4, 1);

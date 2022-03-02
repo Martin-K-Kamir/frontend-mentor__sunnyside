@@ -8,8 +8,8 @@
   @include fix;
 
   &__container {
-    padding-inline: clamp(2.2rem, 1rem + 2.61vw, 5rem); // var1?
-    padding-block: clamp(1rem, 1rem + 1vw, 3rem); // var2?
+    padding-inline: $size-fluid-s; 
+    padding-block: $size-fluid-sm;
     margin-inline: auto;
     max-width: 154.4rem;
     @include flex-me($justify: space-between, $align: center);
@@ -20,7 +20,7 @@
   }
 
   &__links {
-    @include flex-me($align: center, $gap: clamp(2.2rem, 1rem + 2.61vw, 5rem)); // var1?
+    @include flex-me($align: center, $gap: $size-fluid-s); 
 
     @include mq-max-w($tablet-min) {
       display: none;
@@ -37,7 +37,7 @@
     color: $clr-white;
     text-transform: capitalize;
     transition: all 0.2s $ease-1;
-    font-size: clamp(1.6rem, 1rem + 1vw, $fs-default); // var4?
+    font-size: clamp(1.6rem, 1rem + 1vw, $fs-default); // var fs-fluid 1?
 
     &:hover {
       opacity: 1;
@@ -92,8 +92,8 @@
     z-index: $_z-menu;
     @include abs-center;
     top: 23rem;
-    padding-block: 4rem; // var3?
-    width: calc(100% - (clamp(2.2rem, 1rem + 2.61vw, 5rem) * 2)); //var1?
+    padding-block: $size-s;
+    width: calc(100% - ($size-fluid-s * 2));
     background-color: $clr-white;
     @include flex-col-center($gap: 2.2rem);
 
