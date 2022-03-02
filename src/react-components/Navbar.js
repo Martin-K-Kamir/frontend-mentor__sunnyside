@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <div className="nav__container">
-        <img className="nav__logo" src={logo} alt="logo" />
+        <img className="nav__logo" src={logo} alt="" />
         <ul className="nav__links">
           <li className="nav__link">
             <a href="#">About</a>
