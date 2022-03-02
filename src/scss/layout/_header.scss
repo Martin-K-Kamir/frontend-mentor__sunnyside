@@ -49,7 +49,7 @@
     background-position: bottom;
 
     @include mq-phone-landscape {
-      background-image: url('../../imgs/pc/image-header.jpg'); // Fix for landscape becasue the image were too big
+      background-image: url('../../imgs/pc/image-header.jpg'); // fix for landscape view becasue the image were too big
     }
   }
 
