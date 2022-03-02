@@ -21,3 +21,15 @@
     @content;
   }
 }
+
+@mixin mq-phone-min {
+  @media only screen and (max-width: 320px) and (max-height: 500px) {
+    @content;
+  }
+}
+
+@mixin mq-phone-landscape {
+  @media (orientation: landscape) and (min-resolution: 2x) {
+    @content;
+  }
+}

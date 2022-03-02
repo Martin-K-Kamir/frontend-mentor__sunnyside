@@ -39,7 +39,7 @@ $font-explicit: 'Fraunces', serif;
 
 $fs-default: 1.8rem;
 $fs-max: 5rem;
-$fs-lg: 4rem; 
+$fs-lg: 4rem;
 $fs-b: 2.5rem;
 $fs-m: 2rem;
 $fs-s: 1.5rem;
@@ -47,7 +47,7 @@ $fs-sm: 1.3rem;
 $fs-min: 1rem;
 
 $fs-fluid-max: clamp(1, 1, 1);
-$fs-fluid-lg: clamp(1, 1, 1); 
+$fs-fluid-lg: clamp(1, 1, 1);
 $fs-fluid-b: clamp(1, 1, 1);
 $fs-fluid-m: clamp(1, 1, 1);
 $fs-fluid-s: clamp(1, 1, 1);
@@ -60,7 +60,6 @@ $fw-b: 700;
 $fw-m: 500;
 $fw-s: 400;
 $fw-min: 200;
-
 
 // SECTION: Ease
 $ease-1: cubic-bezier(0.25, 0, 0.5, 1);
@@ -98,3 +97,5 @@ $animation-slide-in-down: slide-in-down $duration-default $ease-3;
 
 $animation-slide-out-up: slide-out-up $duration-default $ease-3;
 $animation-slide-out-down: slide-out-down $duration-default $ease-3;
+
+$animation-float: floating $duration-default $ease-in-out-3;

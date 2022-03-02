@@ -3,6 +3,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fade-out {
   to {
     opacity: 0;
@@ -14,6 +15,7 @@
     transform: translateY(-100%);
   }
 }
+
 @keyframes slide-out-down {
   to {
     transform: translateY(100%);
@@ -25,8 +27,15 @@
     transform: translateY(100%);
   }
 }
+
 @keyframes slide-in-down {
   from {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes floating {
+  50% {
+    transform: translateY(-25%);
   }
 }

@@ -8,18 +8,18 @@
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 999;
+  z-index: 0;
 
   &__container {
     padding-inline: clamp(2.2rem, 1rem + 2.61vw, 5rem); // var1?
-    padding-block: clamp(2.2rem, 1rem + 2.61vw, 3rem); // var2?
+    padding-block: clamp(1rem, 1rem + 1vw, 3rem); // var2?
     margin-inline: auto;
     max-width: 154.4rem;
     @include flex-me($justify: space-between, $align: center);
   }
 
   &__logo {
-    @include size(clamp(13rem, 13rem + 7vw, 17.5rem), auto);
+    @include size(clamp(10rem, 5rem + 17vw, 18.5rem), auto);
   }
 
   &__links {
@@ -52,7 +52,7 @@
       border-radius: 50rem;
       font-family: $font-explicit;
       font-weight: $fw-max;
-      @include content-color($clr-grey-200, $clr-white);
+      @include content-color($clr-grey-200, $clr-secondary);
     }
   }
 
@@ -138,7 +138,7 @@
       font-size: $fs-m;
 
       &--highlight {
-        @include content-color($clr-grey-200, $clr-secondary);
+        color: $clr-grey-200;
       }
     }
   }
