@@ -2,10 +2,16 @@
 $HIDE: none;
 $SHOW: block;
 
+$PATH_IMG_PC: '../../imgs/pc';
+$PATH_IMG_PHONE: '../../imgs/phone';
+
 // SECTION: Breakpoints
-$pc-max: 1920px;
-$pc-min: 1440px;
-$phone-max: 375px;
+$pc-max: to-em(1920px);
+$pc-m: to-em(1440px);
+$pc-min: to-em(1000px);
+$tablet-min: to-em(600px);
+$phone-max: to-em(500px);
+//$phone-max: 375px;
 
 // SECTION: Colors
 $clr-primary: hsl(7, 99%, 70%);
@@ -33,12 +39,13 @@ $clr-grey-500: hsl(232, 10%, 55%);
 $clr-grey-400: hsl(213, 9%, 39%);
 $clr-grey-200: hsl(212, 27%, 19%);
 
+
 // SECTION: Typography
 $font-default: 'Barlow', sans-serif;
 $font-explicit: 'Fraunces', serif;
 
 $fs-default: 1.8rem;
-$fs-max: 5rem;
+$fs-max: 7.2rem;
 $fs-lg: 4rem;
 $fs-b: 2.5rem;
 $fs-m: 2rem;

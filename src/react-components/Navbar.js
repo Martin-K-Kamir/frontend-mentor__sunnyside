@@ -8,6 +8,10 @@ export default function Navbar() {
   function toggle() {
     setIsOpen(!isOpen);
     setisMenuShown(true);
+    
+    if (isOpen) setTimeout(() => {
+      document.querySelector('.nav__dropdown-menu').classList.add('hidden');
+    }, 500);
   }
 
   return (
@@ -39,7 +43,7 @@ export default function Navbar() {
         {isMenuShown && (
           <ul
             className={`nav__dropdown-menu ${
-              isOpen ? 'nav__dropdown-menu--open' : 'nav__dropdown-menu--hidden'
+              isOpen ? 'nav__dropdown-menu--slide-in' : 'nav__dropdown-menu--slide-out'
             }`}
           >
             <li className="nav__link">

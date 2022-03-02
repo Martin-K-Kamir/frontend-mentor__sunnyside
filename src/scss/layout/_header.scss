@@ -1,92 +1,81 @@
 .header {
+  $_z-background: -1;
+  $_z-overlay: -2;
+  $_clr-bg: hsl(200, 100%, 62%);
+  $_container-width: 100%;
+  $_container-height: clamp(50vh, 46vh + 22vw, 80vh);
+
+  z-index: layer('header');
+
   &::after {
     content: '';
+    z-index: $_z-overlay;
+    background-color: $_clr-bg;
     @include abs($t: 0, $l: 0);
-    width: 100%;
-    height: clamp(50vh, 46vh + 22vw, 80vh);
-    background-color: #3dbeff;
-    z-index: -2; //var local 1
+    @include size($_container-width, $_container-height);
   }
 
   &__container {
     position: relative;
-    @include size(100%, clamp(50vh, 46vh + 22vw, 80vh));
+    @include size($_container-width, $_container-height);
     @include flex-col-center;
-    overflow: hidden;
-
-    @include mq-phone-landscape {
-      gap: 1.5rem;
-    }
+    @include mq-phone-landscape {gap: 1.5rem;}
 
     & .header__title,
     & .header__arrow {
-      @include pos-Y(-9.8rem);
-
-      @include mq-max-w(1920px) {
-        @include pos-Y(-5vmax);
-      }
-
-      @include mq-phone-landscape {
-        @include pos-Y(0);
-      }
+      @include pos-Y(-8rem);
+      @include mq-max-w($pc-max) {@include pos-Y(-3vmax)}
+      @include mq-phone-landscape {@include pos-Y(0)}
     }
   }
 
   &__background {
     @include abs;
-
     margin-inline: auto;
     width: min(160rem, 100%);
     min-height: 100%;
-    z-index: -1; //var local 1
-    background-image: url('../../imgs/pc/image-header.jpg');
+    z-index: $_z-background;
+    background-image: url('#{$PATH_IMG_PC}/image-header.jpg'); // fallback
     background-image: image-set(
-      url('../../imgs/phone/image-header.jpg') 2x,
-      url('../../imgs/pc/image-header.jpg') 1x
+      url('#{$PATH_IMG_PC}/image-header.jpg') 0x,
+      url('#{$PATH_IMG_PHONE}/image-header.jpg') 2x
     );
-
     background-size: cover;
     background-position: bottom;
-
-    @include mq-phone-landscape {
-      background-image: url('../../imgs/pc/image-header.jpg'); // fix for landscape view becasue the image were too big
-    }
   }
 
   &__title {
-    font-size: 7rem;
+    $_fs-fluid: 5vmax;
+
+    font-size: $fs-max;
     font-family: $font-explicit;
     text-transform: uppercase;
     word-spacing: 1rem;
-    text-align: center;
 
-    @include mq-max-w(1400px) {
-      font-size: 5vmax;
+    @include mq-max-w($pc-m) {
+      font-size: $_fs-fluid;
     }
 
-    @include mq-max-w(600px) {
+    @include mq-max-w($tablet-min) {
+      text-align: center;
       width: min-content;
     }
 
     @include mq-phone-min {
-      font-size: 5.5vmax;
+      font-size: $_fs-fluid + .5vmax; // 5.5vmax
     }
   }
 
   &__arrow {
-    cursor: pointer;
-    width: 2.8rem;
-    height: auto;
+    $_fluid-size: 2vmax;
 
+    cursor: pointer;
+    width: 2.88rem;
+    height: auto;
     animation: $animation-float forwards infinite;
     animation-duration: 3s;
 
-    @include mq-max-w(1400px) {
-      width: 2vmax;
-    }
-
-    @include mq-phone-min {
-      width: 2.5vmax;
-    }
+    @include mq-max-w($pc-m) {width: $_fluid-size}
+    @include mq-phone-min {width: $_fluid-size + .5vmax}// 2.5vmax
   }
 }

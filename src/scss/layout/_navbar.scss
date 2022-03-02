@@ -1,14 +1,11 @@
 .nav {
-  $_bp-navbar-swap: to-em(600px);
   $_z-menu: 2;
   $_z-overlay: 1;
   $_dropdown-duration: 0.3s;
 
   width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 0;
+  z-index: layer('navbar');
+  @include fix;
 
   &__container {
     padding-inline: clamp(2.2rem, 1rem + 2.61vw, 5rem); // var1?
@@ -25,7 +22,7 @@
   &__links {
     @include flex-me($align: center, $gap: clamp(2.2rem, 1rem + 2.61vw, 5rem)); // var1?
 
-    @include mq-max-w($_bp-navbar-swap) {
+    @include mq-max-w($tablet-min) {
       display: none;
     }
 
@@ -62,7 +59,7 @@
     @include flex-col-center($justify: space-between);
     display: $HIDE; // as default
 
-    @include mq-max-w($_bp-navbar-swap) {
+    @include mq-max-w($tablet-min) {
       display: flex;
     }
 
@@ -100,8 +97,7 @@
     background-color: $clr-white;
     @include flex-col-center($gap: 2.2rem);
 
-    &--open {
-      display: flex; // needed for the flex layout
+    &--slide-in {
       animation: $animation-fade-in forwards, $animation-slide-in-up;
       animation-duration: $_dropdown-duration;
 
@@ -113,14 +109,14 @@
       }
     }
 
-    &--hidden {
-      display: flex; // needed for the flex layout
+    &--slide-out {
       animation: $animation-fade-out forwards, $animation-slide-out-down;
       animation-duration: $_dropdown-duration;
 
       // overwrite global keyframe
       @keyframes slide-out-down {
         to {
+              visibility: hidden;
           transform: translateY(1%);
         }
       }
