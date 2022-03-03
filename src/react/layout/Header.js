@@ -1,4 +1,4 @@
-import arrow from '../imgs/icon-arrow-down.svg';
+import arrow from '../../imgs/icon-arrow-down.svg';
 
 export default function Navbar() {
   return (
@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="header__background"></div>
         <h1 className="header__title">we are creatives</h1>
         <div className="header__arrow">
-          <img src={arrow} alt="arrow icon" />
+          <img src={arrow} alt="" />
         </div>
       </div>
     </header>

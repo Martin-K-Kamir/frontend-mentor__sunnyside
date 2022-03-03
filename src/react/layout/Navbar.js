@@ -1,4 +1,4 @@
-import logo from '../imgs/logo.svg';
+import logo from '../../imgs/logo.svg';
 import React, { useState } from 'react';
 
 export default function Navbar() {
@@ -8,16 +8,17 @@ export default function Navbar() {
   function toggle() {
     setIsOpen(!isOpen);
     setisMenuShown(true);
-    
-    if (isOpen) setTimeout(() => {
-      document.querySelector('.nav__dropdown-menu').classList.add('hidden');
-    }, 500);
+
+    if (isOpen)
+      setTimeout(() => {
+        document.querySelector('.nav__dropdown-menu').classList.add('hidden');
+      }, 500);
   }
 
   return (
     <nav className="nav">
       <div className="nav__container">
-        <img className="nav__logo" src={logo} alt="" />
+        <img className="nav__logo logo" src={logo} alt="" />
         <ul className="nav__links">
           <li className="nav__link">
             <a href="#">About</a>
@@ -42,7 +43,7 @@ export default function Navbar() {
         </button>
         {isMenuShown && (
           <ul
-            className={`nav__dropdown-menu ${
+            className={`nav__dropdown-menu  ${
               isOpen ? 'nav__dropdown-menu--slide-in' : 'nav__dropdown-menu--slide-out'
             }`}
           >

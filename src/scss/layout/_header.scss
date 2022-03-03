@@ -19,13 +19,22 @@
     position: relative;
     @include size($_container-width, $_container-height);
     @include flex-col-center;
-    @include mq-phone-landscape {gap: 1.5rem;}
+
+    @include mq-phone-landscape {
+      gap: 1.5rem;
+    }
 
     & .header__title,
     & .header__arrow {
       @include pos-Y(-8rem);
-      @include mq-max-w($pc-max) {@include pos-Y(-3vmax)}
-      @include mq-phone-landscape {@include pos-Y(0)}
+
+      @include mq-max-w($pc-max) {
+        @include pos-Y(-4vmax);
+      }
+
+      @include mq-phone-landscape {
+        @include pos-Y(0);
+      }
     }
   }
 
@@ -62,7 +71,7 @@
     }
 
     @include mq-phone-min {
-      font-size: $_fs-fluid + .5vmax; // 5.5vmax
+      font-size: $_fs-fluid + 1.5vmax; // 6.5vmax
     }
   }
 
@@ -75,7 +84,11 @@
     animation: $animation-float forwards infinite;
     animation-duration: 3s;
 
-    @include mq-max-w($pc-m) {width: $_fluid-size}
-    @include mq-phone-min {width: $_fluid-size + .5vmax}// 2.5vmax
+    @include mq-max-w($pc-m) {
+      width: $_fluid-size;
+    }
+    @include mq-phone-min {
+      width: $_fluid-size + 1vmax; // 3vmax
+    }
   }
 }

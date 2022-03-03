@@ -1,0 +1,99 @@
+.footer {
+  &__container {
+    @include flex-me($align: center, $direction: column);
+  }
+
+  &__img-container {
+    width: min(192rem, 100%);
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+    @include mq-max-w($tablet-min) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &__img {
+    $imgs: (1, 2, 3, 4);
+    aspect-ratio: 1;
+
+    @each $img in $imgs {
+      &--#{$img} {
+        background-image: url('#{$PATH_IMG_PC}/image-footer-#{$img}.jpg'); // fallback
+        background-image: image-set(
+          url('#{$PATH_IMG_PC}/image-footer-#{$img}.jpg') 0x,
+          url('#{$PATH_IMG_PHONE}/image-footer-#{$img}.jpg') 2x
+        );
+        background-size: cover;
+        background-position: bottom;
+      }
+    }
+  }
+
+  &__content {
+    align-self: stretch;
+    padding: $size-fluid-m;
+    @include flex-col-center($gap: $size-fluid-m);
+    @include content-color($clr-tertiary-200, $clr-tertiary-700);
+  }
+
+  &__logo {
+    filter: invert(28%) sepia(25%) saturate(861%) hue-rotate(116deg) brightness(35%) contrast(88%);
+    @include size(clamp(14.5rem, 5rem + 20vw, 18.5rem), auto);
+  }
+
+  &__links {
+    @include flex-me($align: center, $gap: $size-fluid-s);
+  }
+
+  &__link {
+    text-transform: capitalize;
+    font-size: $fs-fluid-s;
+    transition: $pointeraa;
+
+    & a:hover {
+      color: $clr-white;
+    }
+  }
+
+  &__attribution {
+    @include flex-col-center($gap: $size-sm);
+
+    & a:hover {
+      color: $clr-white;
+    }
+  }
+
+  &__text {
+    font-size: $fs-fluid-s;
+    text-align: center;
+  }
+
+  &__socials {
+    @include flex-align-center(3rem);
+
+    & .footer__icon:nth-child(2) {
+      margin-right: 0.5rem; // fixes the gaps to be more evenly since #website have bigger viewbox
+    }
+  }
+
+  &__icon {
+    svg {
+      width: 2.1rem;
+      fill: $clr-tertiary-200;
+      transition: $pointeraa;
+
+      &:hover {
+        fill: $clr-white;
+      }
+    }
+
+    & #website {
+      width: 2.6rem;
+      @include pos(0.1rem, 0.1rem);
+    }
+  }
+}

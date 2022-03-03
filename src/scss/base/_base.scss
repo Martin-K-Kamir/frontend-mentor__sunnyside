@@ -11,6 +11,11 @@ svg {
 a {
   color: inherit;
   text-decoration: none;
+  transition: $pointeraa;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 .app-container {

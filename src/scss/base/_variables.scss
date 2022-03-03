@@ -26,8 +26,10 @@ $clr-secondary-100: hsl(51, 100%, 15%);
 
 $clr-tertiary: hsl(168, 34%, 41%);
 $clr-tertiary-800: hsl(168, 34%, 80%);
+$clr-tertiary-700: hsl(168, 44%, 70);
+$clr-tertiary-500: hsl(168, 44%, 50);
 $clr-tertiary-300: hsl(198, 62%, 26%);
-$clr-tertiary-200: hsl(167, 40%, 24%);
+$clr-tertiary-200: #25564b;
 
 $clr-white: hsl(0, 0%, 100%);
 $clr-white-1005: hsla(0, 0%, 100%, 0.5);
@@ -38,7 +40,6 @@ $clr-grey: hsl(210, 4%, 67%);
 $clr-grey-500: hsl(232, 10%, 55%);
 $clr-grey-400: hsl(213, 9%, 39%);
 $clr-grey-200: hsl(212, 27%, 19%);
-
 
 // SECTION: Typography
 $font-default: 'Barlow', sans-serif;
@@ -57,7 +58,7 @@ $fs-fluid-max: clamp(1, 1, 1);
 $fs-fluid-lg: clamp(1, 1, 1);
 $fs-fluid-b: clamp(1, 1, 1);
 $fs-fluid-m: clamp(1, 1, 1);
-$fs-fluid-s: clamp(1, 1, 1);
+$fs-fluid-s: clamp(1.6rem, 1rem + 1vw, $fs-default);
 $fs-fluid-sm: clamp(1, 1, 1);
 $fs-fluid-min: clamp(1, 1, 1);
 
@@ -77,14 +78,16 @@ $size-m: 5rem;
 $size-s: 4rem;
 $size-sm: 2rem;
 $size-xsm: 1rem;
-$size-min: .5rem;
+$size-min: 0.5rem;
 
 $size-fluid-max: clamp(1, 1, 1);
+$size-fluid-xlg: clamp(1, 1, 1);
 $size-fluid-lg: clamp(1, 1, 1);
-$size-fluid-b: clamp(1, 1, 1);
-$size-fluid-m: clamp(1, 1, 1);
-$size-fluid-s: clamp(2.2rem, 1rem + 2.61vw, 5rem);
-$size-fluid-sm: clamp(1rem, 1rem + 1vw, 3rem);
+$size-fluid-b: clamp(5rem, 1rem + 3.61vw, 8rem);
+$size-fluid-m: clamp(3rem, 1rem + 2.61vw, 5rem);
+$size-fluid-s: clamp(2.5rem, 1rem + 2.61vw, 5rem);
+$size-fluid-sm: clamp(1rem, 1rem + 1.61vw, 3rem);
+$size-fluid-xsm: clamp(1, 1, 1);
 $size-fluid-min: clamp(1, 1, 1);
 
 // SECTION: Ease
@@ -125,3 +128,6 @@ $animation-slide-out-up: slide-out-up $duration-default $ease-3;
 $animation-slide-out-down: slide-out-down $duration-default $ease-3;
 
 $animation-float: floating $duration-default $ease-in-out-3;
+
+// SECTION: Miscellaneous
+$pointeraa: all 0.2s $ease-1;

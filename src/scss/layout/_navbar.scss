@@ -8,19 +8,23 @@
   @include fix;
 
   &__container {
-    padding-inline: $size-fluid-s; 
+    padding-inline: $size-fluid-s;
     padding-block: $size-fluid-sm;
     margin-inline: auto;
     max-width: 154.4rem;
     @include flex-me($justify: space-between, $align: center);
+
+    @include mq-phone-landscape {
+      @include pos-Y(0);
+    }
   }
 
   &__logo {
-    @include size(clamp(10rem, 5rem + 17vw, 18.5rem), auto);
+    @include size(clamp(11rem, 5rem + 17vw, 18.5rem), auto);
   }
 
   &__links {
-    @include flex-me($align: center, $gap: $size-fluid-s); 
+    @include flex-me($align: center, $gap: $size-fluid-s);
 
     @include mq-max-w($tablet-min) {
       display: none;
@@ -36,8 +40,8 @@
     user-select: none;
     color: $clr-white;
     text-transform: capitalize;
-    transition: all 0.2s $ease-1;
-    font-size: clamp(1.6rem, 1rem + 1vw, $fs-default); // var fs-fluid 1?
+    transition: $pointeraa;
+    font-size: $fs-fluid-s;
 
     &:hover {
       opacity: 1;
@@ -116,7 +120,6 @@
       // overwrite global keyframe
       @keyframes slide-out-down {
         to {
-              visibility: hidden;
           transform: translateY(1%);
         }
       }
