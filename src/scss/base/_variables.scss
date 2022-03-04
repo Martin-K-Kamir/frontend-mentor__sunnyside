@@ -55,12 +55,12 @@ $fs-sm: 1.3rem;
 $fs-min: 1rem;
 
 $fs-fluid-max: clamp(1, 1, 1);
-$fs-fluid-lg: clamp(1, 1, 1);
+$fs-fluid-lg: clamp(3.2rem, 1rem + 2vw, $fs-max);
 $fs-fluid-b: clamp(1, 1, 1);
 $fs-fluid-m: clamp(1, 1, 1);
-$fs-fluid-s: clamp(1.6rem, 1rem + 1vw, $fs-default);
-$fs-fluid-sm: clamp(1, 1, 1);
-$fs-fluid-min: clamp(1, 1, 1);
+$fs-fluid-s: clamp($fs-s, 1rem + 1vw, $fs-default);
+$fs-fluid-sm: clamp($fs-sm, 1rem + 1vw, $fs-s);
+$fs-fluid-min: clamp($fs-min, 1rem + 1vw, $fs-sm);
 
 $fw-default: 600;
 $fw-max: 900;
@@ -130,4 +130,4 @@ $animation-slide-out-down: slide-out-down $duration-default $ease-3;
 $animation-float: floating $duration-default $ease-in-out-3;
 
 // SECTION: Miscellaneous
-$pointeraa: all 0.2s $ease-1;
+$pointer: all 0.2s $ease-1;

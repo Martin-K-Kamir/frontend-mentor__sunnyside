@@ -1,5 +1,6 @@
 import Navbar from './react/layout/Navbar';
 import Header from './react/layout/Header';
+import Main from './react/layout/Main';
 import Footer from './react/layout/Footer';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="app-container">
       <Navbar />
       <Header />
+      <Main />
       <Footer />
     </div>
   );

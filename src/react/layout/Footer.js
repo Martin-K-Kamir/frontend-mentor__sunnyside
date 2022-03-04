@@ -14,26 +14,26 @@ export default function Footer() {
           <img className="footer__logo logo" src={logo} alt="" />
           <ul className="footer__links">
             <li className="footer__link">
-              <a href="#">about</a>
+              <a href="foo">about</a>
             </li>
             <li className="footer__link">
-              <a href="#">services</a>
+              <a href="foo">services</a>
             </li>
             <li className="footer__link">
-              <a href="#">projects</a>
+              <a href="foo">projects</a>
             </li>
           </ul>
           <div className="footer__attribution">
             <p className="footer__text">
               Challenge by{' '}
-              <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+              <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">
                 {' '}
                 Frontend Mentor
               </a>
-              . Coded by Martin Kamír.
+              . Coded&nbsp;by&nbsp;Martin&nbsp;Kamír.
             </p>
             <div className="footer__socials">
-              <a className="footer__icon" href="https://martinkamir.com" target="_blank">
+              <a className="footer__icon" href="https://martinkamir.com" target="_blank" rel="noreferrer">
                 <svg
                   id="website"
                   width="32"
@@ -54,7 +54,7 @@ export default function Footer() {
                   <g></g>
                 </svg>
               </a>
-              <a className="footer__icon" href="https://github.com/Martin-K-Kamir" target="_blank">
+              <a className="footer__icon" href="https://github.com/Martin-K-Kamir" target="_blank" rel="noreferrer">
                 <svg
                   width="24"
                   height="24"
@@ -68,7 +68,7 @@ export default function Footer() {
               <a
                 className="footer__icon"
                 href="https://www.linkedin.com/in/martin-kam%C3%ADr-2967aa222/"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 <svg
                   width="24"

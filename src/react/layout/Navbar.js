@@ -21,16 +21,16 @@ export default function Navbar() {
         <img className="nav__logo logo" src={logo} alt="" />
         <ul className="nav__links">
           <li className="nav__link">
-            <a href="#">About</a>
+            <a href="foo">About</a>
           </li>
           <li className="nav__link">
-            <a href="#">Services</a>
+            <a href="foo">Services</a>
           </li>
           <li className="nav__link">
-            <a href="#">Projects</a>
+            <a href="foo">Projects</a>
           </li>
           <li className="nav__link--highlight">
-            <a href="#">Contact</a>
+            <a href="foo">Contact</a>
           </li>
         </ul>
         <button
@@ -48,16 +48,16 @@ export default function Navbar() {
             }`}
           >
             <li className="nav__link">
-              <a href="#">About</a>
+              <a href="foo">About</a>
             </li>
             <li className="nav__link">
-              <a href="#">Services</a>
+              <a href="foo">Services</a>
             </li>
             <li className="nav__link">
-              <a href="#">Projects</a>
+              <a href="foo">Projects</a>
             </li>
             <li className="nav__link--highlight">
-              <a href="#">Contact</a>
+              <a href="foo">Contact</a>
             </li>
           </ul>
         )}

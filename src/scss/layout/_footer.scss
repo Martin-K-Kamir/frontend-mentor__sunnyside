@@ -5,7 +5,6 @@
 
   &__img-container {
     width: min(192rem, 100%);
-
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -18,7 +17,7 @@
 
   &__img {
     $imgs: (1, 2, 3, 4);
-    aspect-ratio: 1;
+    aspect-ratio: 5 / 4;
 
     @each $img in $imgs {
       &--#{$img} {
@@ -36,7 +35,7 @@
   &__content {
     align-self: stretch;
     padding: $size-fluid-m;
-    @include flex-col-center($gap: $size-fluid-m);
+    @include flex-col-center($gap: $size-fluid-sm);
     @include content-color($clr-tertiary-200, $clr-tertiary-700);
   }
 
@@ -51,8 +50,8 @@
 
   &__link {
     text-transform: capitalize;
-    font-size: $fs-fluid-s;
-    transition: $pointeraa;
+    font-size: $fs-fluid-sm;
+    transition: $pointer;
 
     & a:hover {
       color: $clr-white;
@@ -60,7 +59,7 @@
   }
 
   &__attribution {
-    @include flex-col-center($gap: $size-sm);
+    @include flex-col-center($gap: $size-xsm);
 
     & a:hover {
       color: $clr-white;
@@ -68,7 +67,7 @@
   }
 
   &__text {
-    font-size: $fs-fluid-s;
+    font-size: $fs-fluid-sm;
     text-align: center;
   }
 
@@ -84,7 +83,7 @@
     svg {
       width: 2.1rem;
       fill: $clr-tertiary-200;
-      transition: $pointeraa;
+      transition: $pointer;
 
       &:hover {
         fill: $clr-white;
