@@ -3,17 +3,6 @@
   height: $height or $width;
 }
 
-// SECTION: Animation
-@mixin animation(
-  $animation-name,
-  $animation-duration: 0.2s,
-  $animation-delay: 0s,
-  $animation-mode: none
-) {
-  animation: $animation-name $animation-duration linear $animation-delay $animation-mode;
-}
-
-// SECTION: Color & Background-color
 @mixin content-color($clr, $clr-bg) {
   color: $clr;
   background-color: $clr-bg;

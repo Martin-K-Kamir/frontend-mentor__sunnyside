@@ -1,5 +1,6 @@
-@use "sass:math";
+@use 'sass:math';
 
+// SECTION: PX to EM
 $browser-context: 16; // Default
 @function to-em($pixels, $context: $browser-context) {
   @if (unitless($pixels)) {
@@ -13,8 +14,10 @@ $browser-context: 16; // Default
   @return math.div($pixels, $context) * 1em;
 }
 
+// SECTION: Z-index
+$z-indexes: ('modal', 'navbar', 'header', 'default');
+$layer-important: 2147483647;
 
-$z-indexes: ('modal', 'navbar','header', 'default');
 @function layer($name) {
   @if index($z-indexes, $name) {
     @return (length($z-indexes) - index($z-indexes, $name))+1;

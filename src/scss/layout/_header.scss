@@ -55,11 +55,7 @@
 
   &__title {
     $_fs-fluid: 5vmax;
-
     font-size: $fs-max;
-    font-family: $font-explicit;
-    text-transform: uppercase;
-    word-spacing: 1rem;
 
     @include mq-max-w($pc-m) {
       font-size: $_fs-fluid;
@@ -70,8 +66,12 @@
       width: min-content;
     }
 
+    @include mq-max-w($phone-max) {
+      font-size: $_fs-fluid + 0.5vmax; // 5.5vmax
+    }
+
     @include mq-phone-min {
-      font-size: $_fs-fluid + 1.5vmax; // 6.5vmax
+      font-size: $_fs-fluid + 2.5vmax; // 7.5vmax
     }
   }
 

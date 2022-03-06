@@ -3,9 +3,18 @@
   $_z-overlay: 1;
   $_dropdown-duration: 0.3s;
 
+  @include fix;
   width: 100%;
   z-index: layer('navbar');
-  @include fix;
+  transition: all 0.3s $ease-1;
+
+  &--active {
+    background-color: $clr-grey-200;
+
+    & .nav__container {
+      padding-block: $size-xsm;
+    }
+  }
 
   &__container {
     padding-inline: $size-fluid-s;
@@ -13,14 +22,13 @@
     margin-inline: auto;
     max-width: 154.4rem;
     @include flex-me($justify: space-between, $align: center);
-
     @include mq-phone-landscape {
       @include pos-Y(0);
     }
   }
 
   &__logo {
-    @include size(clamp(11rem, 5rem + 17vw, 18.5rem), auto);
+    @include size($size-logo, auto);
   }
 
   &__links {
@@ -42,7 +50,6 @@
     text-transform: capitalize;
     transition: $pointer;
     font-size: $fs-fluid-s;
-
     &:hover {
       opacity: 1;
     }
@@ -98,7 +105,7 @@
     top: 23rem;
     padding-block: $size-s;
     width: calc(100% - ($size-fluid-s * 2));
-    background-color: $clr-white;
+    background-color: $clr-grey-200;
     @include flex-col-center($gap: 2.2rem);
 
     &--slide-in {
@@ -129,16 +136,11 @@
       content: '';
       @include abs($t: -2rem, $r: 0);
       border: 2rem solid transparent;
-      border-right-color: $clr-white;
+      border-right-color: $clr-grey-200;
     }
 
     & .nav__link {
-      color: $clr-grey-500;
       font-size: $fs-m;
-
-      &--highlight {
-        color: $clr-grey-200;
-      }
     }
   }
 

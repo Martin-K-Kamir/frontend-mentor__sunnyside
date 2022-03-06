@@ -1,5 +1,7 @@
 html {
   font-size: 62.5%;
+
+  scroll-behavior: smooth;
 }
 
 svg {
@@ -19,10 +21,14 @@ a {
 }
 
 .app-container {
-  //width: min(213.1rem, 100%);
   margin-inline: auto;
   font-family: $font-default;
   font-size: $fs-default;
   font-weight: $fw-default;
-  color: $clr-white;
+  color: $clr-grey-200;
+}
+
+.main-container {
+  width: $size-page;
+  margin-inline: auto;
 }

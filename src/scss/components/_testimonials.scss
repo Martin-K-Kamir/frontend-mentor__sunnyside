@@ -1,0 +1,109 @@
+.testimonials {
+  position: relative;
+  padding-block: $size-fluid-b;
+  padding-inline: $size-fluid-s;
+
+  @include mq-max-w($pc-min) {
+    padding-block: $size-fluid-m;
+  }
+
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 33.3%;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-behavior: smooth;
+
+    & > * {
+      scroll-snap-align: start;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include mq-max-w($pc-min) {
+      grid-auto-columns: 50%;
+    }
+
+    @include mq-max-w($tablet-min) {
+      grid-auto-columns: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: $size-fluid-lg;
+    text-align: center;
+
+    @include mq-max-w($phone-max) {
+      margin-bottom: $size-fluid-m;
+    }
+  }
+
+  &__card {
+    @include flex-col-center;
+    padding-inline: $size-fluid-xsm;
+  }
+
+  &__avatar-img {
+    width: 8rem;
+    border-radius: $circle;
+  }
+
+  &__message {
+    margin-block: $size-fluid-s;
+    font-size: $fs-fluid-s;
+    color: $clr-grey-400;
+    max-width: 35ch;
+    text-align: center;
+
+    @include mq-max-w($pc-min) {
+      font-size: $fs-fluid-sm;
+    }
+
+    @include mq-max-w($tablet-min) {
+      font-size: $fs-fluid-s;
+    }
+  }
+
+  &__name {
+  }
+
+  &__role {
+  }
+
+  &__arrow-btn {
+    @include size(3rem);
+    @include abs($t: 60%);
+    @include pos-Y(-50%);
+
+    &--left,
+    &--right {
+      @extend .testimonials__arrow-btn;
+      margin: 0 7rem;
+
+      @include mq-max-w(to-em(1650px)) {
+        margin: 0 2rem;
+      }
+
+      @include mq-max-w($tablet-min) {
+        @include size(2rem);
+      }
+    }
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    svg {
+      fill: $clr-grey-200;
+    }
+  }
+}

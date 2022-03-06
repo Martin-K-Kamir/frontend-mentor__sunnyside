@@ -1,17 +1,13 @@
-// SECTION: Config
-$HIDE: none;
-$SHOW: block;
-
-$PATH_IMG_PC: '../../imgs/pc';
-$PATH_IMG_PHONE: '../../imgs/phone';
-
 // SECTION: Breakpoints
 $pc-max: to-em(1920px);
 $pc-m: to-em(1440px);
 $pc-min: to-em(1000px);
+$tablet-max: to-em(900px);
+$tablet-m: to-em(800px);
 $tablet-min: to-em(600px);
 $phone-max: to-em(500px);
-//$phone-max: 375px;
+$phone-m: to-em(375px);
+$phone-min: to-em(330px);
 
 // SECTION: Colors
 $clr-primary: hsl(7, 99%, 70%);
@@ -26,10 +22,14 @@ $clr-secondary-100: hsl(51, 100%, 15%);
 
 $clr-tertiary: hsl(168, 34%, 41%);
 $clr-tertiary-800: hsl(168, 34%, 80%);
-$clr-tertiary-700: hsl(168, 44%, 70);
-$clr-tertiary-500: hsl(168, 44%, 50);
-$clr-tertiary-300: hsl(198, 62%, 26%);
-$clr-tertiary-200: #25564b;
+$clr-tertiary-700: hsl(168, 44%, 70%);
+$clr-tertiary-500: hsl(168, 44%, 50%);
+$clr-tertiary-200: hsl(167, 40%, 24%);
+
+$clr-quaternary: hsl(198, 62%, 26%);
+$clr-quaternary-800: hsl(198, 62%, 80%);
+$clr-quaternary-600: hsl(198, 62%, 60%);
+$clr-quaternary-100: hsl(198, 62%, 10%);
 
 $clr-white: hsl(0, 0%, 100%);
 $clr-white-1005: hsla(0, 0%, 100%, 0.5);
@@ -39,7 +39,7 @@ $clr-white-900: hsl(0, 0%, 90%);
 $clr-grey: hsl(210, 4%, 67%);
 $clr-grey-500: hsl(232, 10%, 55%);
 $clr-grey-400: hsl(213, 9%, 39%);
-$clr-grey-200: hsl(212, 27%, 19%);
+$clr-grey-200: hsl(211, 28%, 19%);
 
 // SECTION: Typography
 $font-default: 'Barlow', sans-serif;
@@ -54,10 +54,10 @@ $fs-s: 1.5rem;
 $fs-sm: 1.3rem;
 $fs-min: 1rem;
 
-$fs-fluid-max: clamp(1, 1, 1);
+$fs-fluid-max: clamp(1rem, 1rem, 1rem);
 $fs-fluid-lg: clamp(3.2rem, 1rem + 2vw, $fs-max);
-$fs-fluid-b: clamp(1, 1, 1);
-$fs-fluid-m: clamp(1, 1, 1);
+$fs-fluid-b: clamp($fs-m, 1rem + 1.5vw, $fs-b);
+$fs-fluid-m: clamp($fs-m, 1rem + 1.3vw, 2.3rem);
 $fs-fluid-s: clamp($fs-s, 1rem + 1vw, $fs-default);
 $fs-fluid-sm: clamp($fs-sm, 1rem + 1vw, $fs-s);
 $fs-fluid-min: clamp($fs-min, 1rem + 1vw, $fs-sm);
@@ -80,15 +80,26 @@ $size-sm: 2rem;
 $size-xsm: 1rem;
 $size-min: 0.5rem;
 
-$size-fluid-max: clamp(1, 1, 1);
-$size-fluid-xlg: clamp(1, 1, 1);
-$size-fluid-lg: clamp(1, 1, 1);
+$size-fluid-max: clamp(15rem, 2rem + 6vw, 20rem);
+$size-fluid-xlg: clamp(10rem, 2rem + 6vw, 15rem);
+$size-fluid-lg: clamp(7rem, 1.5rem + 5vw, 12rem);
 $size-fluid-b: clamp(5rem, 1rem + 3.61vw, 8rem);
 $size-fluid-m: clamp(3rem, 1rem + 2.61vw, 5rem);
 $size-fluid-s: clamp(2.5rem, 1rem + 2.61vw, 5rem);
 $size-fluid-sm: clamp(1rem, 1rem + 1.61vw, 3rem);
-$size-fluid-xsm: clamp(1, 1, 1);
-$size-fluid-min: clamp(1, 1, 1);
+$size-fluid-xsm: clamp(1rem, 1rem + 1.61vw, 2rem);
+$size-fluid-min: clamp(0.5rem, 1vw, 1rem);
+
+$size-txt-max: 72ch;
+$size-txt-lg: 50ch;
+$size-txt-b: 44ch;
+$size-txt-m: 40ch;
+$size-txt-s: 35ch;
+$size-txt-sm: 30ch;
+$size-txt-min: 13ch;
+
+$size-page: min(192rem, 100%);
+$size-logo: clamp(10rem, 5rem + 17vw, 16rem);
 
 // SECTION: Ease
 $ease-1: cubic-bezier(0.25, 0, 0.5, 1);
@@ -129,5 +140,22 @@ $animation-slide-out-down: slide-out-down $duration-default $ease-3;
 
 $animation-float: floating $duration-default $ease-in-out-3;
 
+// SECTION: Aspect ratios
+$box: 1;
+$landscape: 4 / 3;
+$portrait: 3 / 4;
+$widescreen: 16 / 9;
+$ultrawide: 18 / 5;
+$golden: 1.618 / 1;
+
 // SECTION: Miscellaneous
 $pointer: all 0.2s $ease-1;
+
+$rounded: 50rem;
+$circle: 50%;
+
+$HIDE: none;
+$SHOW: block;
+
+$PATH_IMG_PC: '../../imgs/pc';
+$PATH_IMG_PHONE: '../../imgs/phone';

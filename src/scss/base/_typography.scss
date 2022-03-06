@@ -1,0 +1,30 @@
+h1,
+h2,
+h4 {
+  font-family: $font-explicit;
+  font-weight: $fw-max;
+}
+
+h1 {
+  color: $clr-white;
+  font-size: $fs-fluid-max;
+  word-spacing: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $clr-grey-200;
+  font-size: $fs-fluid-lg;
+  text-transform: capitalize;
+}
+
+h4 {
+  color: $clr-grey-200;
+  font-size: $fs-fluid-m;
+}
+
+h5 {
+  color: $clr-grey;
+  font-size: $fs-fluid-sm;
+  font-weight: $fw-min;
+}

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMenuShown, setisMenuShown] = useState(false);
+  const [navActive, setNavActive] = useState(false);
 
   function toggle() {
     setIsOpen(!isOpen);
@@ -15,10 +16,22 @@ export default function Navbar() {
       }, 500);
   }
 
+  function navScrolling() {
+    if (window.scrollY >= 80) {
+      setNavActive(true);
+    } else {
+      setNavActive(false);
+    }
+  }
+
+  window.addEventListener('scroll', navScrolling);
+
   return (
-    <nav className="nav">
+    <nav className={navActive ? 'nav nav--active' : 'nav'}>
       <div className="nav__container">
-        <img className="nav__logo logo" src={logo} alt="" />
+        <a href="index.html">
+          <img className="nav__logo logo" src={logo} alt="" />
+        </a>
         <ul className="nav__links">
           <li className="nav__link">
             <a href="foo">About</a>
