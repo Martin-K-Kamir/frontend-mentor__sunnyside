@@ -76,7 +76,6 @@
       }
 
       & .features__content {
-        min-height: 100%;
         @include size(100%);
         padding-block: $size-fluid-sm;
         gap: $size-fluid-xsm;
@@ -84,7 +83,6 @@
         justify-content: flex-end;
 
         @include mq-max-w($tablet-min) {
-          place-content: end;
           padding-block: $size-fluid-b;
         }
       }
