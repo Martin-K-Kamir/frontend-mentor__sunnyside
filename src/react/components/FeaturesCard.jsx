@@ -5,11 +5,21 @@ export default function FeaturesCard(props) {
         className="features__img"
         style={{ backgroundImage: `url(/images/image-${props.img})` }}
       ></div>
-      <div data-aos="fade-up" className="features__content">
-        <h2 className="features__title">{props.title}</h2>
-        <p className="features__description">{props.description}</p>
+      <div className="features__content">
+        <h2 data-aos="fade-up" className="features__title">
+          {props.title}
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="100" className="features__description">
+          {props.description}
+        </p>
         {props.isLink && (
-          <a className={`features__link ${props.linkModifier}`} href="foo">
+          <a
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-offset="-10"
+            className={`features__link ${props.linkModifier}`}
+            href="foo"
+          >
             learn more
           </a>
         )}

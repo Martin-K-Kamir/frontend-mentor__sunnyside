@@ -6,7 +6,10 @@ import 'aos/dist/aos.css';
 
 export default function Features() {
   useEffect(() => {
-    Aos.init({ duration: 1500 });
+    Aos.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
 
   const features = dataFeatures.map(curFeature => {

@@ -39,7 +39,9 @@ export default function Testimonials() {
 
   return (
     <section className="testimonials">
-      <h2 className="testimonials__title">client testimonials</h2>
+      <h2 data-aos="fade-up" className="testimonials__title">
+        client testimonials
+      </h2>
       <div className="testimonials__container" ref={carousel}>
         {testimonials}
       </div>
