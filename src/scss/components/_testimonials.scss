@@ -4,7 +4,6 @@
   padding-inline: $size-fluid-s;
   padding-bottom: $size-fluid-lg;
 
-
   &__container {
     width: 100%;
     display: grid;
@@ -14,6 +13,7 @@
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 
     & > * {
       scroll-snap-align: start;
@@ -35,7 +35,7 @@
   &__title {
     margin-bottom: $size-fluid-lg;
     text-align: center;
-    
+
     @include mq-max-w($pc-min) {
       margin-bottom: $size-fluid-b;
     }

@@ -81,6 +81,8 @@
         place-content: end center;
         place-items: center;
         gap: $size-fluid-xsm;
+        @include flex-col-center;
+        justify-content: flex-end;
 
         @include mq-max-w($tablet-min) {
           place-content: end;
@@ -101,7 +103,6 @@
         @include mq-max-w($pc-min) {
           font-size: $fs-fluid-lg;
         }
-        
 
         @include mq-max-w($tablet-min) {
           font-size: $fs-fluid-lg;
