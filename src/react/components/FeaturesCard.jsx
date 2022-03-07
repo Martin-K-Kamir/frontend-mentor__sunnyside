@@ -5,7 +5,7 @@ export default function FeaturesCard(props) {
         className="features__img"
         style={{ backgroundImage: `url(/images/image-${props.img})` }}
       ></div>
-      <div className="features__content">
+      <div data-aos="fade-up" className="features__content">
         <h2 className="features__title">{props.title}</h2>
         <p className="features__description">{props.description}</p>
         {props.isLink && (
