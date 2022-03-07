@@ -78,8 +78,6 @@
       & .features__content {
         @include size(100%);
         padding-block: $size-fluid-sm;
-        place-content: end center;
-        place-items: center;
         gap: $size-fluid-xsm;
         @include flex-col-center;
         justify-content: flex-end;
