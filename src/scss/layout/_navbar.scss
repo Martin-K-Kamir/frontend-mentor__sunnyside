@@ -6,7 +6,7 @@
   @include fix;
   width: 100%;
   z-index: layer('navbar');
-  transition: all 0.3s $ease-1;
+  transition: all 0.3s $ease-1 ;
 
   &--active {
     background-color: $clr-grey-200;
@@ -18,11 +18,13 @@
 
   &__container {
     padding-inline: $size-fluid-s;
-    padding-block: $size-fluid-sm;
+    padding-block: $size-fluid-xsm;
     margin-inline: auto;
     max-width: 154.4rem;
     @include flex-me($justify: space-between, $align: center);
+
     @include mq-phone-landscape {
+      padding-block: $size-fluid-min;
       @include pos-Y(0);
     }
   }

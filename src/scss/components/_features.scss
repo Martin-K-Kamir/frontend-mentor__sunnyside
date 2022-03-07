@@ -53,12 +53,21 @@
       position: relative;
       aspect-ratio: $widescreen;
 
-      @include mq-max-w($tablet-max) {
+      @include mq-max-w($pc-min) {
         aspect-ratio: 1 / 1.2;
       }
 
       @include mq-max-w($tablet-min) {
+        aspect-ratio: 1 / 1;
         grid-column: 1 / span 2;
+      }
+
+      @include mq-max-w($phone-max) {
+        aspect-ratio: 1 / 1.1;
+      }
+
+      @include mq-max-w($phone-min) {
+        aspect-ratio: 1 / 1.3;
       }
 
       & .features__img {
@@ -68,12 +77,14 @@
 
       & .features__content {
         @include size(100%);
+        padding-block: $size-fluid-sm;
         place-content: end center;
         place-items: center;
         gap: $size-fluid-xsm;
 
         @include mq-max-w($tablet-min) {
           place-content: end;
+          padding-block: $size-fluid-b;
         }
       }
 
@@ -83,9 +94,14 @@
       }
 
       & .features__title {
-        @include mq-max-w($pc-min) {
+        @include mq-max-w($pc-m) {
           font-size: $fs-fluid-b;
         }
+
+        @include mq-max-w($pc-min) {
+          font-size: $fs-fluid-lg;
+        }
+        
 
         @include mq-max-w($tablet-min) {
           font-size: $fs-fluid-lg;
@@ -95,8 +111,12 @@
       & .features__description {
         max-width: $size-txt-m;
 
-        @include mq-max-w($pc-min) {
+        @include mq-max-w($pc-m) {
           font-size: $fs-fluid-sm;
+        }
+
+        @include mq-max-w($pc-min) {
+          font-size: $fs-fluid-s;
         }
 
         @include mq-max-w($tablet-min) {
@@ -114,7 +134,7 @@
   }
 
   &__content {
-    padding-block: $size-fluid-m;
+    padding-block: $size-fluid-b;
     padding-inline: $size-fluid-s;
     display: grid;
     place-content: center;

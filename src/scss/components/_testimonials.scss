@@ -2,10 +2,8 @@
   position: relative;
   padding-block: $size-fluid-b;
   padding-inline: $size-fluid-s;
+  padding-bottom: $size-fluid-lg;
 
-  @include mq-max-w($pc-min) {
-    padding-block: $size-fluid-m;
-  }
 
   &__container {
     width: 100%;
@@ -37,6 +35,10 @@
   &__title {
     margin-bottom: $size-fluid-lg;
     text-align: center;
+    
+    @include mq-max-w($pc-min) {
+      margin-bottom: $size-fluid-b;
+    }
 
     @include mq-max-w($phone-max) {
       margin-bottom: $size-fluid-m;

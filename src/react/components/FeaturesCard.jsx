@@ -16,7 +16,6 @@ export default function FeaturesCard(props) {
           <a
             data-aos="fade-up"
             data-aos-delay="200"
-            data-aos-offset="-10"
             className={`features__link ${props.linkModifier}`}
             href="foo"
           >

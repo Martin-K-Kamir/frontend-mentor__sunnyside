@@ -73,6 +73,24 @@
     @include mq-phone-min {
       font-size: $_fs-fluid + 2.5vmax; // 7.5vmax
     }
+
+    span {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 2.5rem;
+
+        @include mq-max-w($tablet-min) {
+          margin-right: 0;
+        }
+      }
+
+      &:first-child {
+        @include mq-max-w($tablet-min) {
+          margin-right: 2.5rem;
+        }
+      }
+    }
   }
 
   &__arrow {

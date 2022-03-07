@@ -1,6 +1,7 @@
 export default [
   {
     id: 1,
+    delay: 150,
     message:
       'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
     name: 'Martin K.',
@@ -9,6 +10,7 @@ export default [
   },
   {
     id: 2,
+    delay: 350,
     message:
       'Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.',
     name: 'Thomas S.',
@@ -17,6 +19,7 @@ export default [
   },
   {
     id: 3,
+    delay: 500,
     message:
       'Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!',
     name: 'Jennie F.',

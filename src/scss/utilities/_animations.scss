@@ -48,10 +48,12 @@
   }
 }
 
-[data-aos='show-in'] {
+[data-aos='a'] {
   opacity: 0;
-
+  transform: translateY(-2%);
+  
   &.aos-animate {
+    transform: translateY(0);
     opacity: 1;
   }
 }
