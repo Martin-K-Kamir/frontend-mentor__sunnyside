@@ -63,6 +63,7 @@
   }
 
   &__attribution {
+    margin-top: $size-fluid-sm;
     @include flex-col-center($gap: $size-xsm);
 
     & a:hover {
