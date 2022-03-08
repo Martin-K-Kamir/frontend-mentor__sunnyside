@@ -1,6 +1,6 @@
 h1,
 h2,
-h4 {
+h3 {
   font-family: $font-explicit;
   font-weight: $fw-max;
 }
@@ -18,12 +18,12 @@ h2 {
   text-transform: capitalize;
 }
 
-h4 {
+h3 {
   color: $clr-grey-200;
   font-size: $fs-fluid-m;
 }
 
-h5 {
+h4 {
   color: $clr-grey;
   font-size: $fs-fluid-sm;
   font-weight: $fw-min;
