@@ -1,8 +1,8 @@
 .testimonials {
   position: relative;
-  padding-block: $size-fluid-lg;
+  padding-block: $size-fluid-xlg;
   padding-inline: $size-fluid-s;
-  padding-bottom: $size-fluid-xlg;
+  padding-bottom: $size-fluid-max;
 
   @include mq-max-w($tablet-m) {
     padding-block: $size-fluid-b;
