@@ -51,19 +51,16 @@
 
     &--box {
       position: relative;
-      aspect-ratio: $widescreen;
+      //aspect-ratio: $widescreen;
+      aspect-ratio: $landscape;
 
       @include mq-max-w($pc-min) {
         aspect-ratio: 1 / 1.2;
       }
 
       @include mq-max-w($tablet-min) {
-        aspect-ratio: 1 / 1;
-        grid-column: 1 / span 2;
-      }
-
-      @include mq-max-w($phone-max) {
         aspect-ratio: 1 / 1.1;
+        grid-column: 1 / span 2;
       }
 
       @include mq-max-w($phone-min) {
@@ -77,12 +74,12 @@
 
       & .features__content {
         @include size(100%);
-        padding-block: $size-fluid-sm;
+        padding-block: $size-fluid-lg;
         gap: $size-fluid-xsm;
         @include flex-col-center;
         justify-content: flex-end;
 
-        @include mq-max-w($tablet-min) {
+        @include mq-max-w($tablet-m) {
           padding-block: $size-fluid-b;
         }
       }
@@ -97,9 +94,9 @@
           font-size: $fs-fluid-b;
         }
 
-        @include mq-max-w($pc-min) {
-          font-size: $fs-fluid-lg;
-        }
+        // @include mq-max-w($pc-min) {
+        //   font-size: $fs-fluid-lg;
+        // }
 
         @include mq-max-w($tablet-min) {
           font-size: $fs-fluid-lg;
@@ -113,9 +110,9 @@
           font-size: $fs-fluid-sm;
         }
 
-        @include mq-max-w($pc-min) {
-          font-size: $fs-fluid-s;
-        }
+        // @include mq-max-w($pc-min) {
+        //   font-size: $fs-fluid-s;
+        // }
 
         @include mq-max-w($tablet-min) {
           font-size: $fs-fluid-s;
@@ -125,7 +122,8 @@
   }
 
   &__img {
-    aspect-ratio: $widescreen;
+    //aspect-ratio: $widescreen;
+    aspect-ratio: $landscape;
     background-position: center;
     background-size: cover;
     z-index: $_z-background;
