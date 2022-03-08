@@ -153,6 +153,7 @@
   &__description {
     max-width: $size-txt-b;
     font-size: $fs-fluid-s;
+    color: $clr-grey-400;
 
     @include mq-max-w($tablet-min) {
       text-align: center;
