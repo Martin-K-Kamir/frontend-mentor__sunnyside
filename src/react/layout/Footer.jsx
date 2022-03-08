@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="footer__img footer__img--4"></div>
         </div>
         <div className="footer__content">
-          <a href="index.html">
+          <a href="index.html" aria-label="go back">
             <img className="footer__logo logo" src={logo} alt="" />
           </a>
           <ul className="footer__links">
@@ -44,6 +44,7 @@ export default function Footer() {
                 href="https://martinkamir.com"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="my website"
               >
                 <svg
                   id="website"
@@ -70,6 +71,7 @@ export default function Footer() {
                 href="https://github.com/Martin-K-Kamir"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="my github"
               >
                 <svg
                   width="24"
@@ -86,6 +88,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/martin-kam%C3%ADr-2967aa222/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="my linkedin"
               >
                 <svg
                   width="24"

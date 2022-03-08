@@ -3,8 +3,8 @@ export default function TestimonialsCard(props) {
     <article data-aos="fade-up" data-aos-delay={props.delay} className="testimonials__card">
       <img className="testimonials__avatar-img" src={`./images/image-${props.avatar}`} alt="foo" />
       <p className="testimonials__message">{props.message}</p>
-      <h4 className="testimonials__name">{props.name}</h4>
-      <h5 className="testimonials__role">{props.role}</h5>
+      <h3 className="testimonials__name">{props.name}</h3>
+      <h4 className="testimonials__role">{props.role}</h4>
     </article>
   );
 }

@@ -18,7 +18,13 @@ export default function Header() {
             creatives
           </span>
         </h1>
-        <a data-aos="fade-down" data-aos-delay="300" className="header__arrow" href="#features">
+        <a
+          data-aos="fade-down"
+          data-aos-delay="300"
+          className="header__arrow"
+          href="#features"
+          aria-label="scroll down"
+        >
           <img src={arrow} alt="" />
         </a>
       </div>

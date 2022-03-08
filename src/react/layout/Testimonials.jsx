@@ -46,7 +46,11 @@ export default function Testimonials() {
         {testimonials}
       </div>
 
-      <button className="testimonials__arrow-btn--left" onClick={() => moveCarousel(-1)}>
+      <button
+        className="testimonials__arrow-btn--left"
+        onClick={() => moveCarousel(-1)}
+        aria-label="button left"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -61,7 +65,11 @@ export default function Testimonials() {
           />
         </svg>
       </button>
-      <button className="testimonials__arrow-btn--right" onClick={() => moveCarousel(1)}>
+      <button
+        className="testimonials__arrow-btn--right"
+        onClick={() => moveCarousel(1)}
+        aria-label="button right"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

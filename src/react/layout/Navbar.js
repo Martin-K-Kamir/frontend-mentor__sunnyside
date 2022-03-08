@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <nav className={navActive ? 'nav nav--active' : 'nav'}>
       <div className="nav__container">
-        <a href="index.html">
+        <a href="index.html" aria-label="go back">
           <img className="nav__logo logo" src={logo} alt="" />
         </a>
         <ul className="nav__links">
