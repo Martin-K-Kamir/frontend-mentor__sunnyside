@@ -3,7 +3,7 @@
   $_z-overlay: -2;
   $_clr-bg: hsl(200, 100%, 62%);
   $_container-width: 100%;
-  $_container-height: clamp(50vh, 46vh + 22vw, 80vh);
+  $_container-height: clamp(50vh, 46vh + 22vw, 90vh);
 
   z-index: layer('header');
 

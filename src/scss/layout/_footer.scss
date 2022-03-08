@@ -38,7 +38,7 @@
 
   &__content {
     align-self: stretch;
-    padding: $size-fluid-b;
+    padding: $size-fluid-lg;
     @include flex-col-center($gap: $size-fluid-m);
     @include content-color($clr-tertiary-200, $clr-tertiary-700);
   }
