@@ -1,7 +1,5 @@
-
 import FeaturesCard from '../components/FeaturesCard';
 import dataFeatures from '../../features-data';
-
 
 export default function Features() {
   const features = dataFeatures.map(curFeature => {
@@ -9,8 +7,8 @@ export default function Features() {
   });
 
   return (
-    <section id="features" className="features">
+    <div id="features" className="features">
       <div className="features__container">{features}</div>
-    </section>
+    </div>
   );
 }

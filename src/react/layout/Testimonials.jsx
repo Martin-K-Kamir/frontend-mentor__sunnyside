@@ -38,7 +38,7 @@ export default function Testimonials() {
   });
 
   return (
-    <section className="testimonials">
+    <div className="testimonials">
       <h2 data-aos="fade-up" className="testimonials__title">
         client testimonials
       </h2>
@@ -84,6 +84,6 @@ export default function Testimonials() {
           />
         </svg>
       </button>
-    </section>
+    </div>
   );
 }
